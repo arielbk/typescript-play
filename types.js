@@ -1,0 +1,16 @@
+var myString;
+var myNum;
+var myBool;
+var myVar;
+var strArr;
+var boolArr;
+var strNumTuple;
+myString = 'Hello world!';
+myNum = 1;
+myBool = true;
+myVar = 22;
+strArr = ['Yo', 'string'];
+boolArr = [true, false, true, true];
+strNumTuple = ['hello', 10];
+var myVoid = undefined;
+console.log(myVoid);
