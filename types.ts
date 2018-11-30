@@ -20,7 +20,9 @@ boolArr = [true, false, true, true];
 strNumTuple = ['hello', 10];
 
 let myVoid: void = undefined;
-let myVoid: void = undefined;
-let myVoid: void = undefined;
+myVoid = null;
 
 console.log(myVoid);
+
+
+let isDog = true;

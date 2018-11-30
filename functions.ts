@@ -25,6 +25,47 @@ function getName(firstName: string, lastName?: string): string{
 
 console.log(getName('John', 'Doe'));
 
-function myVoid(): void {
-  return;
+type AddFunc = (x: number, y: number) => number;
+
+const add: AddFunc = (x: number, y: number) => x + y;
+
+const add2 = ({ a, b }: { a: number, b: number }) => a + b;
+
+
+// unions
+
+let maybeNumber: number | string = 5;
+maybeNumber = 'hello!';
+
+interface Dog {
+  bark: string
 }
+
+interface Cat {
+  purr: string
+}
+
+type CatDog = Dog & Cat | number | string;
+
+let catDog: CatDog = {
+  bark: 'bark!',
+  purr: 'purrrr!',
+}
+
+catDog = '3';
+
+if (typeof catDog === 'string') {
+  console.log('Catdog, you are a string.');
+}
+
+// casting
+
+add(catDog as any, catDog as any);
+
+// any 
+
+const doesAnything = (x: any) => {
+  console.log(x);
+}
+
+doesAnything(() => 43.6);
